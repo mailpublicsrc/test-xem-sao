@@ -40,7 +40,6 @@ deploy:
     - node -v
     - npm install
     # Restart NodeJS service
-    - forever stop index.js || true
-    - forever start index.js
+    - pm2 restart all
   only:
     - develop
