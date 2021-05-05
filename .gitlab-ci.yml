@@ -33,8 +33,9 @@ deploy:
     - my-shell-runner
   before_script:
     - echo "PATH='${PATH}'"
-    - export PATH="/home/ec2-user/.nvm/versions/node/v16.0.0/bin"
+    - export PATH="$PATH:/home/ec2-user/.nvm/versions/node/v16.0.0/bin"
   script:
+    - who
     # - sudo chmod +x /home/ec2-user/project-ci
     # Only copy changed files to project folder
     - cp -r -u * /var/www/project-ci
