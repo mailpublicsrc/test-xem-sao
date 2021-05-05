@@ -35,8 +35,8 @@ deploy:
     - who
     # - sudo chmod +x /home/ec2-user/project-ci
     # Only copy changed files to project folder
-    - cp -r -u * /home/ec2-user/project-ci
-    - cd /home/ec2-user/project-ci
+    - cp -r -u * /var/www/project-ci
+    - cd /var/www/project-ci
     - npm install
     # Restart NodeJS service
     - forever stop index.js || true
