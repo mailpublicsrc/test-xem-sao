@@ -31,6 +31,9 @@ deploy:
   # Config to use our Runner with Executor Shell
   tags:
     - my-shell-runner
+  before_script:
+    - echo "PATH='${PATH}'"
+    - export PATH="$PATH:/home/ec2-user/.nvm/versions/node/v16.0.0/bin"
   script:
     - who
     # - sudo chmod +x /home/ec2-user/project-ci
