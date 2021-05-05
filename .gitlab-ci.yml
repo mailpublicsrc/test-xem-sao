@@ -1,6 +1,6 @@
 # We have 2 stage Test and Deploy
 stages:
-  - test
+  # - test
   - deploy
 
 # Config cache
@@ -8,20 +8,20 @@ cache:
   paths:
     - node_modules/
 
-# Test job
-test:
-  # Docker image
-  image: node:latest
-  # Attach Test job to Test stage
-  stage: test
-  # Config to use GitLab Shared Runner with Executor Docker
-  tags:
-    - docker
-  script:
-    - npm install
-  # Defines the names of branches and tags the job runs for
-  only:
-    - develop
+# # Test job
+# test:
+#   # Docker image
+#   image: node:latest
+#   # Attach Test job to Test stage
+#   stage: test
+#   # Config to use GitLab Shared Runner with Executor Docker
+#   tags:
+#     - docker
+#   script:
+#     - npm install
+#   # Defines the names of branches and tags the job runs for
+#   only:
+#     - develop
 
 # Deploy job
 deploy:
@@ -33,6 +33,7 @@ deploy:
     - my-shell-runner
   script:
     # Only copy changed files to project folder
+    - who
     - cp -r -u * /home/ec2-user/project-ci
     - cd /home/ec2-user/project-ci
     - npm install
