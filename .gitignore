@@ -1,0 +1,8 @@
+node_modules/
+iisnode/
+npm-debug.log*
+.vscode/
+.idea/
+.env*
+**/*.log
+dist/

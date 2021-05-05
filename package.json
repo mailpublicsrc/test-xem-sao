@@ -1,0 +1,22 @@
+{
+  "name": "gitlab-runner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/vuong-briswell/node-gitlab-runner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/vuong-briswell/node-gitlab-runner/issues"
+  },
+  "homepage": "https://gitlab.com/vuong-briswell/node-gitlab-runner#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
