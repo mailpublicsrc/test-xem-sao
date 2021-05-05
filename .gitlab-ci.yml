@@ -32,7 +32,7 @@ deploy:
     - my-shell-runner
   before_script:
     - echo "PATH='${PATH}'"
-    - export PATH="$PATH:/home/ec2-user/.nvm/versions/node/v16.0.0/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/ec2-user/.local/bin:/home/ec2-user/bin"
+    - export PATH="/home/ec2-user/.nvm/versions/node/v16.0.0/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/ec2-user/.local/bin:/home/ec2-user/bin"
   script:
     - echo "PATH='${PATH}'"
     - who
