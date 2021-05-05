@@ -35,6 +35,7 @@ deploy:
     - echo "PATH='${PATH}'"
     - export PATH="$PATH:/home/ec2-user/.nvm/versions/node/v16.0.0/bin"
   script:
+    - echo "PATH='${PATH}'"
     - who
     # - sudo chmod +x /home/ec2-user/project-ci
     # Only copy changed files to project folder
