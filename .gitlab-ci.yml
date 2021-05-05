@@ -33,7 +33,7 @@ deploy:
     - my-shell-runner
   script:
     - who
-    - chmod +x /home/ec2-user/project-ci
+    - sudo chmod +x /home/ec2-user/project-ci
     # Only copy changed files to project folder
     - cp -r -u * /home/ec2-user/project-ci
     - cd /home/ec2-user/project-ci
